@@ -1,0 +1,25 @@
+.Header__container {
+    display: flex;
+    justify-self: flex-start;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 300px;
+    margin-top: 1.625rem;
+}
+
+.Header__image {
+    min-width: 66px;
+    height: auto;
+}
+
+.Header__image.medium {
+    min-width: 91px;
+    height: auto;
+    margin: 0 2rem;
+}
+
+.Header__image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}

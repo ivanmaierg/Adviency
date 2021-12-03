@@ -1,0 +1,9 @@
+.List {
+    margin-top:2rem;
+    display: flex;
+    justify-self: start;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-primary);
+    list-style-type: none;
+}

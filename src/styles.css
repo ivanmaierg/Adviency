@@ -1,40 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&display=swap");
 :root {
-  --primary-color: #588c73;
-  --primary-accent: #426c58;
-  --secondary-color: #f2e394;
-  --secondary-accent: #beb271;
-  --bg-color: #d96459;
-  --bg-accent: #c04e43;
+    --primary-color: #588c73;
+    --primary-accent: #426c58;
+    --secondary-color: #f2e394;
+    --secondary-accent: #beb271;
+    --bg-color: #d96459;
+    --bg-accent: #c04e43;
+    --font-color: #9F3636;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: var(--font-primary);
-  background: var(--primary-color);
-  min-height: 100vh;
-  width: 100%;
-  background: linear-gradient(
-    to right bottom,
-    var(--bg-color) 50%,
-    var(--bg-accent) 50%
-  );
-  background-repeat: no-repeat;
-  background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient( to right bottom, var(--bg-color) 50%, var(--bg-accent) 50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: var(--font-primary);
+    color: var(--font-color);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#root {
+    width: 100%;
 }
 
 .App {
-  font-family: sans-serif;
-  text-align: center;
-  font-family: var(--font-primary);
-}
-
-.List {
-  list-style-type: none;
-  font-family: var(--font-primary);
+    width: 100%;
+    display: flex;
+    justify-content: normal;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: auto;
+    font-size: 18px;
+    font-weight: medium;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
 }
