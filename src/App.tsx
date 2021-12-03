@@ -7,8 +7,8 @@ export default function App() {
   return (
     <main className="App">
       <Header />
-      <List gifts={["MacBook","La factura de edelap","termo"]} />
-      <Snowfall  snowflakeCount={50}/>
+      <List gifts={["2kg de yerba playadito","La factura de Edelap","Un termo xq se me pinchó"]} />
+      <section><Snowfall  snowflakeCount={50}/></section>
    </main>
   );
 }

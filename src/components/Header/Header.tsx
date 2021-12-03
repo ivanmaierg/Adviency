@@ -6,11 +6,11 @@ import './Header.css';
 
 const Header = () => {
     return (
-    <header className="Header__container">
+    <section className="Header__container">
             <div className="Header__image"><img src={sock} alt="christmas image"></img></div>
             <div className="Header__image medium"><img src={wreath} alt="christmas image"></img></div>
             <div className="Header__image"><img src={mistleToe} alt="christmas image"></img></div>
-    </header>
+    </section>
     )
 }
 
