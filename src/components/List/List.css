@@ -1,6 +1,8 @@
 .List {
     margin-top:2rem;
-    display: flex;
+    display: grid;
+    grid-template-columns:repeat(1,1fr);
+    grid-template-rows:repeat(1,1fr);
     justify-self: start;
     flex-direction: column;
     align-items: center;

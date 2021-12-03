@@ -1,6 +1,6 @@
 .List__item {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     min-width: 18.625rem;
     min-height: 4.6875rem;
@@ -12,4 +12,15 @@
     font-family: inherit;
     font-size: inherit;
     text-align: left;
+}
+
+.List__item--img{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin:0 1rem;
+    background-color:var(--tertiary-color);
+    border-radius:50%;
+    min-width:61px;
+    min-height: 56px;
 }

@@ -7,6 +7,7 @@
     --bg-color: #d96459;
     --bg-accent: #c04e43;
     --font-color: #9F3636;
+    --tertiary-color: #F2AE72;
 }
 
 * {
@@ -37,11 +38,13 @@ body {
 .App {
     width: 100%;
     display: flex;
-    justify-content: normal;
+    justify-content: space-between;
+    padding: 1.625rem 0;
+    margin: auto;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
-    width: auto;
+    min-height: 100vh;
+    max-width: 320px;
     font-size: 18px;
     font-weight: medium;
     color: inherit;

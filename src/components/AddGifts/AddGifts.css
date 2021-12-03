@@ -1,0 +1,21 @@
+.Form {
+    justify-self: flex-end;
+    display:flex;
+    justify-content:space-around;
+    width: 100%;
+    align-items:center;
+}
+
+
+.Input__container {
+    border-radius: 12px;
+    overflow: hidden;
+    border-style: none;
+    background-color: #FFF5ED;
+    border:2px solid #F2AE72;
+    font-size: inherit;
+    color: inherit;
+    width: 14.6875rem;
+    height: 3.0625rem;
+    padding:0 2rem;
+}
