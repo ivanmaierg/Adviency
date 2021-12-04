@@ -4,7 +4,6 @@
     align-items: center;
     min-width: 18.625rem;
     min-height: 4.6875rem;
-    margin-bottom: 2rem;
     background-color: var(--secondary-color);
     border-radius: 12px;
     border-bottom: 0.3125rem solid var(--secondary-accent);

@@ -6,5 +6,6 @@
     font-family: var(--font-primary);
     list-style-type: none;
     height:100%;
-    margin:1rem auto auto auto;
+    margin:1rem auto 1rem auto;
+    grid-row-gap: 1rem;
 }
