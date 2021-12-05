@@ -7,19 +7,26 @@
     background-color: var(--secondary-color);
     border-radius: 12px;
     border-bottom: 0.3125rem solid var(--secondary-accent);
-    color:inherit;
+    color: inherit;
     font-family: inherit;
     font-size: inherit;
     text-align: left;
+    overflow:hidden;
 }
 
-.List__item--img{
+.List__item--img {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
-    margin:0 1rem;
-    background-color:var(--tertiary-color);
-    border-radius:50%;
-    min-width:61px;
+    margin: 0 1rem;
+    background-color: var(--tertiary-color);
+    border-radius: 50%;
+    min-width: 61px;
     min-height: 56px;
+}
+
+.List__item p {
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
