@@ -2,8 +2,8 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    min-width: 18.625rem;
-    min-height: 4.6875rem;
+    width: 18.625rem;
+    height: 4.6875rem;
     background-color: var(--secondary-color);
     border-radius: 12px;
     border-bottom: 0.3125rem solid var(--secondary-accent);
