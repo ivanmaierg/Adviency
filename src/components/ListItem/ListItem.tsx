@@ -5,7 +5,7 @@ import { DeleteItemButton } from '../Buttons/Buttons';
 import {Gift} from './../../utils/types';
 interface Props {
     gift:Gift;
-    handleDeleteItem:Function;
+    handleDeleteItem:Function; 
 }
 
 export default function ListItem({gift,handleDeleteItem}: Props): ReactElement {

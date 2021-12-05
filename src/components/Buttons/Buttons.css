@@ -31,7 +31,6 @@
     width: 56px;
     height: 56px;
     border-radius: 12px;
-    border-style: none;
     border-bottom: 4px solid var(--primary-accent);
     transition: all 2ms;
 }
@@ -48,4 +47,37 @@
 
 .deleteItem:active {
     transition: all 2ms;
+}
+
+.deleteAll {
+    background-color: var(--tertiary-color);
+    padding: 5px;
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    border-bottom: 4px solid var(--tertiary-accent);
+    transition: all 2ms;
+}
+
+.modal {
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 0.5rem 0.7rem;
+}
+
+.delete {
+    background-color: var(--font-color);
+    color: white;
+}
+
+.outline {
+    background-color: transparent;
+    border: 1px solid var(--tertiary-color);
+    color: var(--font-color);
+}
+
+.outline:hover{
+    background-color: var(--tertiary-color);
+    filter:brightness(120%);
 }
