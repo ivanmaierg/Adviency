@@ -1,11 +1,21 @@
+.List__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 1rem auto auto auto;
+    width: 100%;
+}
+
 .List {
-    margin-top:2rem;
     display: grid;
-    grid-template-columns:repeat(1,1fr);
-    grid-template-rows:repeat(1,1fr);
+    align-self: stretch;
+    justify-self: stretch;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     font-family: var(--font-primary);
     list-style-type: none;
-    height:100%;
-    margin:1rem auto 1rem auto;
+    height: auto;
+    margin: 1rem auto;
     grid-row-gap: 1rem;
 }
