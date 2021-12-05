@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import Button, { AddButton } from '../Buttons/Buttons';
 import { Input } from '../Input/Input';
 import './AddGifts.css';
-
+import {Gift} from './../../utils/types';
 interface Props {
     setGifts:Function;
 }
@@ -13,7 +13,11 @@ export const AddGifts = ({setGifts}: Props) => {
         setValue(e.currentTarget.value);
     }
     const handleOnSubmit = (e:React.FormEvent) => {
-        setGifts((prev:string[]) => [...prev,value]);
+        const newGift:Gift = {
+            id:Date.now(),
+            title:value,
+        } 
+        setGifts((prev:string[]) => [...prev,newGift]);
         setValue("");
         e.preventDefault();
   } 
