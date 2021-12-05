@@ -1,13 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
 :root {
+    --font-primary: 'Roboto', sans-serif;
     --primary-color: #588c73;
     --primary-accent: #426c58;
     --secondary-color: #f2e394;
     --secondary-accent: #beb271;
     --bg-color: #d96459;
     --bg-accent: #c04e43;
-    --font-color: #9F3636;
+    --font-color: #982A2A;
     --tertiary-color: #F2AE72;
+    --tertiary-accent: #996B42;
+    --light-color: #FFF5ED;
 }
 
 * {
