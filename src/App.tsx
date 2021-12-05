@@ -1,19 +1,21 @@
+
+import React, { useState } from "react";
 import Header from "./components/Header/Header";
 import List from "./components/List/List";
 import Snowfall from 'react-snowfall';
 import "./styles.css";
-import React, { useState } from "react";
 import { AddGifts } from "./components/AddGifts/AddGifts";
 import { Gift } from "./utils/types";
 import ListItem from "./components/ListItem/ListItem";
 import { ButtonDeleteAll } from "./components/Buttons/Buttons";
 import { DeleteModal } from "./components/DeleteModal/DeleteModal";
+import { demoGifts } from "./utils/demoGift";
 
 
 
 export default function App() {
   const [isOpen, setOpen] = useState(false);
-  const [gifts,setGifts] = useState<Gift[]>([]);
+  const [gifts,setGifts] = useState<Gift[]>(()=>demoGifts);
   const handleDeleteItem = (id:number | string) => {
     setGifts(gifts.filter((gift) => {
         return gift.id !== id;
