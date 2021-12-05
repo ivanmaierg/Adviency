@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     border: none;
-    padding:5px;
+    padding: 5px;
 }
 
 .Button__Container span {
@@ -15,10 +15,11 @@
     width: 45px;
 }
 
-.Button__Container span img{
-    width:100%;
-    height:100%;
+.Button__Container span img {
+    width: 100%;
+    height: 100%;
 }
+
 .Button__Container:active {
     transform: translateY(3px);
     transition: all 2ms;
@@ -42,15 +43,17 @@
     transition: all 2ms;
 }
 
+.Button__Container.deleteItem{
+    width:2.45rem;
+} 
+
 .deleteItem {
     height: 100%;
     border-radius: 12px 0 0 12px;
     background-color: var(--tertiary-color);
 }
 
-.deleteItem span {
-    padding: 5px;
-}
+
 
 .deleteItem:active {
     transition: all 2ms;
