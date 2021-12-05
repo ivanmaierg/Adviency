@@ -2,6 +2,31 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    border: none;
+}
+
+.Button__Container span {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Button__Container:active {
+    transform: translateY(3px);
+    transition: all 2ms;
+}
+
+.Button__Container:active span {
+    filter: brightness(100%);
+}
+
+.Button__Container:hover {
+    filter: brightness(110%);
+    cursor: pointer;
+}
+
+.primary {
     background-color: var(--primary-color);
     width: 56px;
     height: 56px;
@@ -11,20 +36,16 @@
     transition: all 2ms;
 }
 
-.Button__Container:active {
-    transform: translateY(3px);
-    transition: all 2ms;
-    filter: brightness(80%);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+.deleteItem {
+    height: 100%;
+    border-radius: 12px 0 0 12px;
+    background-color: var(--tertiary-color);
 }
 
-.Button__Container:active span {
-    filter: brightness(100%);
-} 
+.deleteItem span {
+    padding: 5px;
+}
 
-.Button__Container span {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.deleteItem:active {
+    transition: all 2ms;
 }
