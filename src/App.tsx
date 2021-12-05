@@ -14,8 +14,6 @@ export default function App() {
         return gift.id !== id;
     }));
   }
-
-
   return (
     <main className="App">
       <Header />
