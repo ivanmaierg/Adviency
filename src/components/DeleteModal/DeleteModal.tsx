@@ -11,14 +11,14 @@ interface ModalProps {
 }
 
 export const DeleteModal = ({isOpen, handleDelete, closeModal}: ModalProps) => (
-	<Modal isOpen={isOpen} onClick={closeModal}>
+	<Modal isOpen={isOpen} onClose={closeModal}>
 		<div className="DeleteModal__container">
 			<Tilt className="DeleteModal__tilt"
 				trackOnWindow={true}
-				tiltMaxAngleX={20}
-				tiltMaxAngleY={20}
+				tiltMaxAngleX={15}
+				tiltMaxAngleY={15}
 				tiltReverse={true}
-				perspective={40}
+				perspective={60}
 				scale={1}
 				gyroscope={true} >
 				<span className="DeleteModal__portrait">

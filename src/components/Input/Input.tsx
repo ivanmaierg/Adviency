@@ -11,7 +11,7 @@ interface Props {
 
 export const Input = ({value, onChange, type, id, classNameLabel, className, ...rest}:Props) => (
 	<label htmlFor={id} className={classNameLabel}>
-		<input id={id} type={type} value={value} className={className} onChange={onChange} {...rest}/>
+		<input placeholder="Escribe aquí" id={id} type={type} value={value} className={className} onChange={onChange} {...rest}/>
 	</label>
 
 );

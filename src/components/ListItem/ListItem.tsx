@@ -13,7 +13,7 @@ export default function ListItem({gift, handleDeleteItem}: Props): ReactElement 
 	return (
 		<li className="List__item">
 			<span className="List__item--img">
-				<img src={src ? src : giftItem} />
+				<img src={src ? src : giftItem} alt="item" />
 			</span>
 			<p>
 				{title}
