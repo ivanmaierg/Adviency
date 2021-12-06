@@ -7,19 +7,22 @@ interface ModalProps {
     onClick:React.MouseEventHandler;
 }
 
+export const Modal = ({isOpen, children, onClick}: ModalProps) => {
+	const portalDiv = document.getElementById('portal');
+	if (!portalDiv) {
+		throw new Error('The element #portal wasn\'t found');
+	}
 
-export const Modal = ({isOpen,children,onClick}: ModalProps) => {
-    const portalDiv = document.getElementById('portal');
-    if (!portalDiv) {
-    throw new Error("The element #portal wasn't found");
-}
-    if(!isOpen) return null;
-    return ReactDOM.createPortal(
-        <>
-        <div className="Modal__Overlay" onClick={onClick}/>
-        <div className="Modal__Container">
-            {children}
-        </div>
-        </>
-   , portalDiv);
-}
+	if (!isOpen) {
+		return null;
+	}
+
+	return ReactDOM.createPortal(
+		<>
+			<div className="Modal__Overlay" onClick={onClick}/>
+			<div className="Modal__Container">
+				{children}
+			</div>
+		</>
+		, portalDiv);
+};

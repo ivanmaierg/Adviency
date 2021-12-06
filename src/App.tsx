@@ -13,7 +13,7 @@ import { demoGifts } from "./utils/demoGift";
 
 
 
-export default function App() {
+export default function App():React.FC = (): ReactElement {
   const [isOpen, setOpen] = useState(false);
   const [gifts,setGifts] = useState<Gift[]>(()=>demoGifts);
   const handleDeleteItem = (id:number | string) => {

@@ -1,11 +1,9 @@
-import React from "react";
-import ListItem from "../ListItem/ListItem";
+import React from 'react';
 import './List.css';
-import {Gift} from '../../utils/types';
 interface Props {
   children:React.ReactNode;
 }
 
-export default function List({ children }: Props): JSX.Element {
-  return <div className="List__container"><ul className="List">{children}</ul></div>
+export default function List({children}: Props) {
+	return <div className="List__container"><ul className="List">{children}</ul></div>;
 }
