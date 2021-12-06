@@ -15,8 +15,8 @@ export const DeleteModal = ({isOpen, handleDelete, closeModal}: ModalProps) => (
 		<div className="DeleteModal__container">
 			<Tilt className="DeleteModal__tilt"
 				trackOnWindow={true}
-				tiltMaxAngleX={15}
-				tiltMaxAngleY={15}
+				tiltMaxAngleX={8}
+				tiltMaxAngleY={25}
 				tiltReverse={true}
 				perspective={60}
 				scale={1}
