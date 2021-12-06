@@ -6,6 +6,7 @@ module.exports = {
 	extends: [
 		'plugin:react/recommended',
 		'xo',
+		'plugin:jsx-a11y/recommended',
 	],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
@@ -18,6 +19,7 @@ module.exports = {
 	plugins: [
 		'react',
 		'@typescript-eslint',
+		'jsx-a11y',
 	],
 	rules: {
 	},
