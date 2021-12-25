@@ -1,7 +1,6 @@
 import React from 'react';
-import GiftBox from '../../svg/giftbox.svg';
 import DeleteBeige from '../../svg/deletebeige.svg';
-import Trash from '../../svg/trash.svg';
+import Edit from '../../svg/editicon.svg';
 import './Buttons.css';
 
 interface ButtonProps {
@@ -11,32 +10,24 @@ interface ButtonProps {
     onClick?:React.MouseEventHandler;
 }
 
-const Button = ({type, children, className, onClick, ...rest}: ButtonProps) => (
-	<button type={type} className={className} onClick={onClick} {...rest}>
+const Button = ({type = 'button', children, className, onClick, ...rest}: ButtonProps) => (
+	<button type={type} className={'Button__Container ' + className} onClick={onClick} {...rest}>
 		{children}
 	</button>
 );
 
-export const AddButton = ({...rest}:ButtonProps) => (
-	<Button className="Button__Container primary AddButton" {...rest}>
-		<span className="Button__content">
-			<img src={GiftBox} alt="add gift icon" />
-		</span>
-	</Button>
-);
-
 export const DeleteItemButton = ({...rest}:ButtonProps) => (
-	<Button className="Button__Container deleteItem" {...rest}>
-		<span className="Button__content">
+	<Button className="Button__Container" {...rest}>
+		<span>
 			<img src={DeleteBeige} alt="delete item icon" />
 		</span>
 	</Button>
 );
 
-export const ButtonDeleteAll = ({...rest}: ButtonProps) => (
-	<Button className="Button__Container deleteAll" {...rest}>
-		<span className="Button__content">
-			<img src={Trash} alt="delete all icon" />
+export const EditItemButton = ({...rest}:ButtonProps) => (
+	<Button className="Button__Container" {...rest}>
+		<span>
+			<img src={Edit} alt="delete item icon" />
 		</span>
 	</Button>
 );

@@ -2,6 +2,7 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    background-color: transparent;
     border: none;
     padding: 5px;
 }
@@ -11,8 +12,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 45px;
-    width: 45px;
+    height: 26px;
+    width: 26px;
 }
 
 .Button__Container span img {
@@ -30,22 +31,16 @@
 }
 
 .Button__Container:hover {
-    filter: brightness(110%);
+    filter: brightness(150%);
     cursor: pointer;
+    transition: ease-in-out 100ms;
 }
 
-.primary {
-    background-color: var(--primary-color);
-    width: 56px;
-    height: 56px;
-    border-radius: 12px;
-    border-bottom: 4px solid var(--primary-accent);
-    transition: all 2ms;
-}
 
 .Button__Container.deleteItem{
     width:2.45rem;
 } 
+
 
 .deleteItem {
     height: 100%;
@@ -53,20 +48,21 @@
     background-color: var(--tertiary-color);
 }
 
-
-
 .deleteItem:active {
     transition: all 2ms;
 }
 
-.deleteAll {
-    background-color: var(--tertiary-color);
-    width: 56px;
-    height: 56px;
-    border-radius: 12px;
-    border-bottom: 4px solid var(--tertiary-accent);
-    transition: all 2ms;
+
+.BottomModal--button{
+    height: 100%;
+    width:100%;
+    font-weight: bold;
 }
+
+
+
+/* Delete Modal buttons */
+
 
 .modal {
     font-size: 12px;
@@ -74,6 +70,9 @@
     border-radius: 12px;
     padding: 0.5rem 0.7rem;
 }
+
+
+
 
 .delete {
     background-color: var(--font-color);
@@ -89,4 +88,30 @@
 .outline:hover {
     background-color: var(--tertiary-color);
     filter: brightness(120%);
+}
+
+
+
+
+/* Utilities */
+
+
+.primary{
+    background-color: var(--primary-color);
+    border-bottom: 5px solid var(--primary-accent);
+    border-radius: 12px;
+    color:var(--light-color);
+}
+.danger{
+    background-color: var(--bg-color);
+    border-bottom: 5px solid  var(--bg-accent);
+    border-radius: 12px;
+    color:var(--light-color);
+
+}
+.secondary{
+    background-color: #734E4B;
+    border-bottom: 5px solid  gray;
+    border-radius: 12px;
+    color:var(--light-color);
 }

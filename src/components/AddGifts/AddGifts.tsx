@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {AddButton} from '../Buttons/Buttons';
 import {Input} from '../Input/Input';
 import './AddGifts.css';
 import {Gift} from '../../utils/types';
@@ -18,6 +17,9 @@ const AddGifts = ({setGifts}: Props) => {
 		const newGift:Gift = {
 			id: Date.now(),
 			title: value,
+			price: 0,
+			quantity: 0,
+			dest: '',
 		};
 		setGifts((prev:string[]) => [...prev, newGift]);
 		setValue('');
@@ -27,7 +29,6 @@ const AddGifts = ({setGifts}: Props) => {
 	return (
 		<form className="Form" onSubmit={handleOnSubmit}>
 			<Input type="text" id="gift" value={value} className="Input__container" onChange={handleInputChange} />
-			<AddButton />
 		</form>
 	);
 };
