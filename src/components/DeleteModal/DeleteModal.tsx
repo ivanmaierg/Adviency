@@ -11,7 +11,7 @@ interface ModalProps {
 }
 
 export const DeleteModal = ({isOpen, handleDelete, closeModal}: ModalProps) => (
-	<Modal isOpen={isOpen} onClose={closeModal}>
+	<Modal type="center" isOpen={isOpen} onClose={closeModal}>
 		<div className="DeleteModal__container">
 			<Tilt className="DeleteModal__tilt"
 				trackOnWindow={true}

@@ -4,12 +4,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './Modal.css';
 interface ModalProps {
-    isOpen:boolean;
+    isOpen?:boolean;
     children: React.ReactNode;
-    onClose:Function;
+    onClose?:Function;
+	type:'center'|'bottom';
+	overlay?:boolean;
 }
 
-export const Modal = ({isOpen, children, onClose}: ModalProps) => {
+export const Modal = ({isOpen = true, children, onClose, type, overlay}: ModalProps) => {
 	const portalDiv = document.getElementById('portal');
 	if (!portalDiv) {
 		throw new Error('The element #portal wasn\'t found');
@@ -20,13 +22,17 @@ export const Modal = ({isOpen, children, onClose}: ModalProps) => {
 	}
 
 	const handleOnClick = ():void => {
-		onClose();
+		if (type === 'center' && onClose) {
+			onClose();
+		}
 	};
+
+	const className = 'Modal__Container--' + type;
 
 	return ReactDOM.createPortal(
 		<>
-			<div className="Modal__Overlay" onClick={handleOnClick}/>
-			<div className="Modal__Container">
+			<div className={`Modal__Overlay--${overlay ? 'open' : 'close'}`} onClick={handleOnClick}/>
+			<div className={className}>
 				{children}
 			</div>
 		</>

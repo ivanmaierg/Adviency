@@ -1,17 +1,19 @@
+/* eslint-disable no-undef */
 import React from 'react';
-
 interface Props {
     onChange:React.ChangeEventHandler<HTMLInputElement>;
     value:any;
     type:string;
     id?:string;
-    classNameLabel?:string;
-    className:string
+    className:string;
+    placeHolder?:string;
+    children?:JSX.Element;
+    required?:boolean;
 }
 
-export const Input = ({value, onChange, type, id, classNameLabel, className, ...rest}:Props) => (
-	<label htmlFor={id} className={classNameLabel}>
-		<input placeholder="Escribe aquí" id={id} type={type} value={value} className={className} onChange={onChange} {...rest}/>
+export const Input = ({value, onChange, type, id, className, required = false, children, placeHolder = '', ...rest}:Props) => (
+	<label htmlFor={id} className={className}>
+		{children && children}<input placeholder={placeHolder} required={required} id={id} type={type} value={value} onChange={onChange} {...rest}/>
 	</label>
 
 );

@@ -1,26 +1,23 @@
-import React, {MouseEventHandler} from 'react';
-import Button from '../Buttons/Buttons';
-import Triangle from '../../svg/triangleIcon.svg';
+/* eslint-disable no-undef */
+import React from 'react';
+import {Modal} from '../Modal/Modal';
+
 import './BottomModal.css';
 
-interface Props {
-	isOpen:boolean;
-	isVisible:boolean;
-	handleClose:MouseEventHandler;
+export interface ModalTabProps {
+	setModalTab:Function;
 }
 
-export const BottomModal = ({isOpen, isVisible = true, handleClose}: Props) => (
+interface Props {
+	children:JSX.Element[];
+	modalTab:number;
+	setModalTab:React.Dispatch<React.SetStateAction<number>>;
+	overlay:boolean;
+}
 
-	<div className={`BottomModal__container  ${isOpen ? 'open' : 'close'} ${isVisible ? '' : 'notVisible'}`}>
-		<Button className="BottomModal__active-button" onClick={handleClose}><img src={Triangle} alt="open / close icon"></img></Button>
-		<div className="BottomModal__content">
-			<div className="BottomModal__content--total">Total<span>$1220,00</span></div>
-			<div className={'BottomModal__content--buttons'}>
-				<Button className="primary BottomModal--button">Agregar regalos</Button>
-				<Button className="secondary BottomModal--button">Previsualizar</Button>
-				<Button className="danger BottomModal--button">Borrar todo</Button>
-			</div>
-		</div>
-	</div>
+export const BottomModal = ({children, modalTab, overlay}: Props) => (
+	<Modal type="bottom" overlay={overlay}>
+		{children[modalTab]}
+	</Modal>
 );
 
