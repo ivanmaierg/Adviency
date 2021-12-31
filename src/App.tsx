@@ -21,12 +21,12 @@ const App = () => {
 
 	const handleDeleteItem = (id:number | string) => {
 		const filterGifts:Gift[] = state.gifts.filter(gift => gift.id !== id);
-		changeState({...state, gifts: filterGifts});
+		changeState({...state, gifts: filterGifts, total: 0});
 	};
 
 	// This is pass to the DeleteModal
 	const handleDeleteAll = () => {
-		changeState({...state, gifts: []});
+		changeState({...state, gifts: [], total: 0});
 		setOpen(false);
 	};
 
