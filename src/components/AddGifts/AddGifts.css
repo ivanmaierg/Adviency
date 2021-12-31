@@ -7,6 +7,9 @@
     height: 16.8125;
 }
 
+.AddGifts__container form {
+    width: 100%;
+}
 .AddGifts__header{
     display: flex;
     justify-content: space-between;
@@ -14,6 +17,7 @@
 }
 .AddGifts__header h3{
     font-size: 24px;
+    text-transform: capitalize;
 }
 
 .AddGifts__header--buttons{
@@ -30,6 +34,7 @@
     border-radius: 50%;
 
 }
+
 .AddGifts__Form{
     display: flex;
     justify-content: center;
@@ -58,20 +63,21 @@
     place-content: center;
     border-radius: 50%;
     background-color: #FAD7B9;
-    min-width: 61px;
-    min-height: 56px;
+    width: 61px;
+    height: 56px;
     cursor: pointer;
 }
 
 .Form__Input--image img {
     margin: auto;
-    width: 100%;
-    height: 100%;
+    object-fit: contain;
+    width: 90%;
+    height: 90%;
 }
 .Form__Input--image #image{
     opacity: 0;
-   position: absolute;
-   z-index: -1;
+    position: absolute;
+    z-index: -1;
 }
 
 .Form__middle{
@@ -110,6 +116,7 @@
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+    padding:0 0.2rem;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -170,12 +177,33 @@ input[type=number] {
     color: var(--light-color);
 }
 
+.Form__input--img.show {
+    display: block;
+    position: absolute;
+    width: auto;
+    background-color: var(--light-color);
+    border: 1px solid var(--tertiary-accent);
+    top:140px;
+}
+.Form__input--img.show input {
+    width: 100%;
+    height: 100%;
+}
+
+.Form__input--img.show input:focus{
+    outline: none;
+    border:none;
+}
+
+.Form__input--img {
+    display: none;
+}
+
 .AddGift__Buttons{
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .AddGift__Buttons button {

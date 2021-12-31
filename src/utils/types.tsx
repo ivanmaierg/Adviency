@@ -6,3 +6,7 @@ export type Gift = {
     id:number | string;
     src?:string;
 }
+
+export type Title = {
+    [key: string]: string
+}

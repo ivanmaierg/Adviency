@@ -6,9 +6,10 @@ import {Gift} from './../../utils/types';
 interface Props {
 	gift: Gift;
 	handleDeleteItem: Function;
+	handleEdit:Function;
 }
 
-export default function ListItem({gift, handleDeleteItem}: Props): ReactElement {
+export default function ListItem({gift, handleDeleteItem, handleEdit}: Props): ReactElement {
 	const {title, src, dest, quantity, price} = gift;
 	return (
 		<li className="List__item">
@@ -28,7 +29,9 @@ export default function ListItem({gift, handleDeleteItem}: Props): ReactElement 
 				<DeleteItemButton onClick={() => {
 					handleDeleteItem(gift.id);
 				}} />
-				<EditItemButton/>
+				<EditItemButton onClick={() => {
+					handleEdit(gift);
+				}}/>
 			</div>
 
 		</li>
