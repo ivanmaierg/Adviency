@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 import {demoGifts} from 'src/utils/demoGift';
 import {Gift} from 'src/utils/types';
 
-interface State {
+export interface State {
 	selectedGift?:Gift;
     deleteModal:{
         isOpen:boolean;
@@ -15,6 +15,7 @@ interface State {
         overlay:boolean;
     }
 	total:number;
+	error?:any;
 }
 
 interface IAppContext {
