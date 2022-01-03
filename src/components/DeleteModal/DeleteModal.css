@@ -1,0 +1,59 @@
+
+.DeleteModal__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.DeleteModal__tilt {
+    margin: auto;
+    position: fixed;
+    top:-40%;
+}
+
+.DeleteModal__portrait {
+    display: flex;
+    background-color: var(--tertiary-color);
+    border-radius: 50%;
+    overflow: hidden;
+    width: 4.9375rem;
+    height: auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.DeleteModal__portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.DeleteModal__text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: normal;
+    height: 100%;
+    font-weight: 400;
+}
+
+.DeleteModal__text--title {
+    margin: 1rem 0 0 0;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.DeleteModal__text--subtitle {
+    margin: 0.5rem auto;
+    font-size: 12px;
+}
+
+.DeleteModal__ButtonsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}

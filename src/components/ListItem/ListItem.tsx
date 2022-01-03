@@ -1,14 +1,39 @@
-import React, { ReactElement } from 'react'
+import React, {ReactElement} from 'react';
 import './ListItems.css';
-
+import giftItem from '../../svg/giftitem.svg';
+import {DeleteItemButton, EditItemButton} from '../Buttons/Buttons';
+import {Gift} from './../../utils/types';
 interface Props {
-    title:string;
+	gift: Gift;
+	handleDeleteItem: Function;
+	handleEdit:Function;
 }
 
-export default function ListItem({title}: Props): ReactElement {
-    return (
-        <li className="List__item">
-            <p>{title}</p>
-        </li>
-    )
+export default function ListItem({gift, handleDeleteItem, handleEdit}: Props): ReactElement {
+	const {title, src, dest, quantity, price} = gift;
+	return (
+		<li className="List__item">
+			<div className="List__item--img">
+				<span className="img">
+					<img src={src ? src : giftItem} alt="item" />
+				</span>
+				<span className="List__item--quantity">
+					<p>x {quantity && quantity}</p>
+				</span>
+			</div>
+			<div className="List__item--text-content">
+				<p>{title} - $ {price}</p>
+				<p className="for">Destinatario: {dest}</p>
+			</div>
+			<div className="List__item--buttons">
+				<DeleteItemButton onClick={() => {
+					handleDeleteItem(gift.id);
+				}} />
+				<EditItemButton onClick={() => {
+					handleEdit(gift);
+				}}/>
+			</div>
+
+		</li>
+	);
 }

@@ -1,0 +1,86 @@
+
+
+.BottomModal__Buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 9.5rem;
+    width: 100%;
+}
+
+.BottomModal__active-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: var(--tertiary-color);
+    border-radius: 50% 50% 0 0;
+    height: 41px;
+    width: 41px; 
+}
+
+
+.open .BottomModal__active-button{
+    bottom: 10rem;
+}
+
+.BottomModal__active-button img {
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+
+.BottomModal__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+
+.BottomModal__content--total{
+    color:var(--light-color);
+    background-color: var(--tertiary-accent);
+    border-radius: 5px;
+    padding: 0.2rem 2rem;
+    font-size: 18px;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    margin-bottom: 1rem;
+}
+
+.BottomModal__content--buttons{
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    gap:5px;
+    margin:0 1rem;
+}
+
+.open .BottomModal__content .BottomModal__content--buttons{
+    display: flex;
+    opacity: 1;
+}
+
+.BottomModal__Buttons.close {
+    height: 3rem;
+}
+
+.close .BottomModal__active-button{
+    border-radius:  0 0 50% 50%;
+    bottom: 3.5rem;
+    transform: rotateX(180deg);
+}
+
+.close .BottomModal__content .BottomModal__content--total{
+    margin-bottom: 0;
+}
+
+.close .BottomModal__content .BottomModal__content--buttons{
+    position: absolute;
+    opacity:0;
+}
+

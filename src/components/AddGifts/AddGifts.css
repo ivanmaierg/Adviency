@@ -1,0 +1,220 @@
+.AddGifts__container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width:299px;
+    height: 16.8125;
+}
+
+.AddGifts__container form {
+    width: 100%;
+}
+.AddGifts__header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.AddGifts__header h3{
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+.AddGifts__header--buttons{
+    display: flex;
+    align-items: center;
+}
+
+.AddGifts__header--buttons button:nth-child(1){
+    margin-right: 0.5rem;
+}
+
+.AddGifts__header--buttons button{
+    background-color: var(--tertiary-accent);
+    border-radius: 50%;
+
+}
+
+.AddGifts__Form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-color);
+    border-radius: 12px;
+    border:1px solid var(--tertiary-accent);
+    padding: 0.3rem;
+    margin: 1.5rem 0;
+}
+
+.Input__container {
+    position: relative;
+}
+
+
+.Form__left{
+    position: relative;
+    width: auto;
+}
+
+.Form__Input--image{
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    background-color: #FAD7B9;
+    width: 61px;
+    height: 56px;
+    cursor: pointer;
+}
+
+.Form__Input--image img {
+    margin: auto;
+    object-fit: contain;
+    width: 90%;
+    height: 90%;
+}
+.Form__Input--image #image{
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.Form__middle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 3.2rem;
+    width: auto;
+    margin:0 0.7rem 0 2rem;
+}
+
+.Form__middle .Form__input{
+    display: block;
+    width: 109px;
+    height: 23px;
+    background-color:#FAD7B9;
+    border-radius: 5px;
+}
+
+.Form__right{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 3.2rem;
+    width: 100%;
+
+}
+ input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    padding:0 0.2rem;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+ }
+ 
+
+ ::-moz-placeholder {  /* Firefox 19+ */
+    text-align: center;  
+ }
+ 
+ :-ms-input-placeholder {  
+    text-align: center; 
+ }
+
+ .Form__right .Form__input{
+    display: block;
+    width: 50px;
+    height: 23px;
+    background-color: #FAD7B9;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+.Form__Input--quantity{
+    overflow: hidden;
+    position: absolute;
+    display:block;
+    bottom: 0;
+    left: 50px;
+    border-radius:68px;
+    width: 28px;
+    height: 1rem;
+}
+.Form__Input--quantity input{
+    display: block;
+    border: none;
+    background-color:var(--primary-accent);
+    width: 100%;
+    height: 100%;
+    color: var(--light-color);
+}
+
+.Form__Input--quantity input::placeholder{
+    color: var(--light-color);
+}
+
+.Form__input--img.show {
+    display: block;
+    position: absolute;
+    width: auto;
+    background-color: var(--light-color);
+    border: 1px solid var(--tertiary-accent);
+    top:140px;
+}
+.Form__input--img.show input {
+    width: 100%;
+    height: 100%;
+}
+
+.Form__input--img.show input:focus{
+    outline: none;
+    border:none;
+}
+
+.Form__input--img {
+    display: none;
+}
+
+.AddGift__Buttons{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.AddGift__Buttons button {
+    width: 53px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+.AddGift__Buttons button img {
+    width: auto;
+    height: auto;
+}
