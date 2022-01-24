@@ -1,5 +1,3 @@
-/* eslint-disable no-negated-condition */
-
 import React, {useState, useContext} from 'react';
 import Header from './components/Header/Header';
 import List from './components/List/List';
